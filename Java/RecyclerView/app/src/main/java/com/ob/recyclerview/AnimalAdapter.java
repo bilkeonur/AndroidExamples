@@ -1,7 +1,10 @@
 package com.ob.recyclerview;
 
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.ob.recyclerview.databinding.RowAnimalBinding;
@@ -29,6 +32,10 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.AnimalHold
     {
         holder.binding.imgAnimal.setImageResource(animals.get(position).getImage());
         holder.binding.txtAnimal.setText(animals.get(position).getName());
+
+        holder.itemView.setOnClickListener(view -> {
+            Toast.makeText(holder.itemView.getContext(),"OK",Toast.LENGTH_LONG).show();
+        });
     }
 
     @Override
