@@ -18,29 +18,25 @@
             android:id="@+id/btnAdd"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:text="Add"
-            android:onClick="onAdd"/>
+            android:text="Add"/>
 
         <Button
             android:id="@+id/btnFetch"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:text="Fetch"
-            android:onClick="onFetch"/>
+            android:text="Fetch"/>
 
         <Button
             android:id="@+id/btnUpdate"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:text="Update"
-            android:onClick="onUpdate"/>
+            android:text="Update"/>
 
         <Button
             android:id="@+id/btnDelete"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:text="Delete"
-            android:onClick="onDelete"/>
+            android:text="Delete"/>
 
     </LinearLayout>
 

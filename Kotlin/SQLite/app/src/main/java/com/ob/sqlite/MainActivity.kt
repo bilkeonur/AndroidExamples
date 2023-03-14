@@ -2,7 +2,6 @@ package com.ob.sqlite
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import com.ob.sqlite.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity()
@@ -17,35 +16,40 @@ class MainActivity : AppCompatActivity()
         val view = binding.root
         setContentView(view)
 
-        dbHelper = DBHelper(this)
-    }
+        val btnAdd = binding.btnAdd
+        val btnFetch = binding.btnFetch
+        val btnUpdate = binding.btnUpdate
+        val btnDelete = binding.btnDelete
 
-    fun onAdd(view:View) {
-        val person1 = Person(1,"Onur","Bilke")
-        val person2 = Person(2,"Cansu","Bilke")
-        val person3 = Person(3,"Ada","Bilke")
-        val person4 = Person(4,"Deniz","Bilke")
+        btnAdd.setOnClickListener {
+            val person1 = Person(1, "Onur", "Bilke")
+            val person2 = Person(2, "Cansu", "Bilke")
+            val person3 = Person(3, "Ada", "Bilke")
+            val person4 = Person(4, "Deniz", "Bilke")
 
-        dbHelper.addPerson(person1)
-        dbHelper.addPerson(person2)
-        dbHelper.addPerson(person3)
-        dbHelper.addPerson(person4)
-    }
-
-    fun onFetch(view:View) {
-        val persons = dbHelper.getPersons()
-
-        for (person in persons) {
-            println("Id : ${person.id} Name : ${person.name} Surname : ${person.surname}")
+            dbHelper.addPerson(person1)
+            dbHelper.addPerson(person2)
+            dbHelper.addPerson(person3)
+            dbHelper.addPerson(person4)
         }
-    }
 
-    fun onUpdate(view:View) {
-        val person = Person(1,"On","Bi")
-        dbHelper.updatePerson(person)
-    }
+        btnFetch.setOnClickListener {
+            val persons = dbHelper.getPersons()
 
-    fun onDelete(view:View) {
-        dbHelper.deletePerson(1)
+            for (person in persons) {
+                println("Id : ${person.id} Name : ${person.name} Surname : ${person.surname}")
+            }
+        }
+
+        btnUpdate.setOnClickListener {
+            val person = Person(1,"On","Bi")
+            dbHelper.updatePerson(person)
+        }
+
+        btnDelete.setOnClickListener {
+            dbHelper.deletePerson(1)
+        }
+
+        dbHelper = DBHelper(this)
     }
 }
