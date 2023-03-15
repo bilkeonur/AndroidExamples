@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <Button
+            android:id="@+id/btnGetAll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Get All"/>
+
+        <Button
+            android:id="@+id/btnFindByName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Find By Name"/>
+
+        <Button
+            android:id="@+id/btnLoadAllByIds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Load All By Ids"/>
+
+        <Button
+            android:id="@+id/btnInsert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Insert"/>
+
+        <Button
+            android:id="@+id/btnInsertAll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Insert All"/>
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delete"/>
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
