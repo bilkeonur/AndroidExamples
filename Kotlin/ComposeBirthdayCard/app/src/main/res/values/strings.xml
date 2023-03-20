@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ComposeBirthdayCard</string>
+    <string name="happy_birthday_text">Happy Birthday Onur</string>
+    <string name="signature_text">- from Cansu</string>
+</resources>
